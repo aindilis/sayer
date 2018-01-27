@@ -1,0 +1,4 @@
+Need to store code:
+
+USER is an attempt to create a massive file for 'use'ing tons of perl
+modules so that we can map their functions using the symbol table.

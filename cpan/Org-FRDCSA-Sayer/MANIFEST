@@ -1,0 +1,11 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Org/FRDCSA/Sayer.pm
+lib/Org/FRDCSA/Sayer/DBDHash.pm
+lib/Org/FRDCSA/Sayer/Preconditions.pm
+lib/Org/FRDCSA/Sayer/Tie.pm
+t/00-load.t
+t/pod-coverage.t
+t/pod.t

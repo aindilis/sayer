@@ -1,0 +1,3 @@
+Should have a test in which the database is created or overwritten.
+Should test initialization of a database.
+Should test caching retrieval, removal if that's a feature, etc.

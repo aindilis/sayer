@@ -1,0 +1,258 @@
+# Okay, so suppose we establish that it is a sentence
+
+# IsSentence($data)
+
+# we also would like to run other tests on it, if necessary or
+# important, or instance, extract named entities, etc
+
+# perhaps the program should fork and execute a sub and if it doesn't
+# return within the timeout, record timeout
+
+# you administer tests (like in chemistry) to ascertain substance,
+# test reactions, etc.  Just like you test for no breathing before
+# applying CPR. etc.
+
+
+"Hash"
+"Array"
+"String"
+
+"Text" => {
+	   "Named Entity Recognition",
+	   "Date Extraction",
+	  },
+
+  "List of sentences"
+  "List of paragraphs",
+
+"the name of something",
+"a name"
+is "a "
+
+
+
+"Shallow Parsing (Assert)"
+"Sentiment Analysis (OpinionFinder)"
+
+"Boolean Query" => {
+
+		   },
+
+
+Question Answering (QUAC/OpenEphyra/Aranea/%TextMine/AnswerBus)
+Machine Translation (Apertium)
+Query Expansion (lucqe)
+Recognizing Textual Enailment (#FreeRTE/CAndC)
+
+Natural Language to Logic (CELT/#Formalize/!ResearchCyc)
+Controlled Language (ACE)
+
+Shallow Parsing (Assert)
+Sentiment Analysis (OpinionFinder)
+Anaphora Resolution (JavaRAP)
+Sentence Similarity (%Meteor)
+Text Clustering (PerlLib/crossbow)
+TFIDF (PerlLib)
+Topic Gisting (ConceptNet)
+Affective Analysis (ConceptNet)
+Word Sense Disambiguation (SenseRelate)
+Named Entity Recognition (Cage/CAndC/NamedEntity/OpenNLP/Simple/Stanford/TagEn/TextMine)
+Tokenization (treebank/TextMine)
+
+Grammar Checking (LinkGrammar)
+Summarization (ConceptNet/MEAD)
+Parsing (Charniak/Lingua::EN::Tagger/LinkGrammar)
+Predicate Parsing (%Assert/Enju)
+
+Abbreviation Extraction
+Body Text Extraction (BTE)
+Concept Extraction ()
+Date Extraction (TempEx)
+Definitional Extraction ()
+Fact Extraction (#fact-extraction/%Assert)
+Information Extraction (T-Rex/MinorThird/Elie/#MDR/#AIE)
+Logic Form Extraction (FreeLogicForm/CAndC)
+Temporal Ordering Extraction (TARSQI)
+Terminology Extraction (TermEx)
+
+Semantic Annotation (OpenCalais)
+
+Topic Detection and Tracking ()
+Definitional Question Answering ()
+
+Bad Word Lists ()
+Word Connotation (EAT)
+Rhyming (rhyme)
+
+HTML PROCESSING
+
+Event Extraction (%GeekEventAggregator)
+
+URI Extraction
+
+INFORMATION EXTRACTION
+
+
+MontyLingua - what does that do?
+
+
+AI/Knowledge Representation:
+Knowledge Based System (#FreeKBS/OpenCYC/#%Sayer)
+
+Studying
+Digital Library (DigiLib/Greenstone)
+Intelligent Tutoring System (CLEAR/#SystemX)
+
+Humanitarian/Life Support
+
+
+Task Management (Manager Todo)
+
+
+BASIC USAGE:
+
+
+ADVANCED USAGE:
+
+Prequisites: In order to make full use of the FRDCSA, there are a few
+prerequisites.  The first is to know how to use Emacs, because a lot
+of the capabilities of the FRDCSA are based in, managed, etc. from
+within Emacs.  Emacs' legendary complexity naturally meshes with the
+FRDCSA theme of useful complexity.
+
+Emacs
+
+	Emacs is an inherently complex and incidentally powerful
+system for manipulating symbolic knowledge.  It is designed in a way
+that allows it to be easily extended to perform a great variety of
+tasks.  Though significantly hampered by its lack of graphics
+capabilities and archaic language, it is still IMHO the single most
+powerful application on the planet.  The FRDCSA extends Emacs with
+hundreds of functions for performing related tasks.
+
+
+Perl
+
+	Perl is a useful language that can quickly build systems.  It
+has powerful features for system administration tasks, and can easily
+glue various other programs together.  It is also very handy for text
+processing.
+
+
+Debian
+
+	Debian is a very powerful linux distribution which
+incidentally is based on solid ethical principles.  It's packaging
+system, among other things, is what draws the FRDCSA to use it, as the
+FRDCSA seeks to make packages for all free software.  Like Emacs and
+Perl, it is so good at what it does that it necessary for the FRDCSA.
+
+
+
+
+
+
+FRDCSA Emacs tools:
+
+Moving around the FRDCSA projects and files
+
+There are several useful commands 
+
+radar.el includes many commands for jumping around frdcsa files
+
+
+
+
+
+
+Note that the FRDCSA consists of many projects in various stages of
+completion.
+
+Using radar-web-search
+
+
+
+Using UniLang from within Emacs:
+
+
+
+
+All UniLang commands
+
+CSO, -a <search>
+QUAC, -q <search>
+
+etc.
+
+
+Locating Software with the FRDCSA
+
+Summary:
+
+Finding:
+shell:		radar-web-search --mt <search>
+unilang:	CSO, -a <search>
+shell:		raiders-of-the-ftp-sites 
+shell:		system-recommender
+shell:		folktags tagsearch <regex> # folktags currently not working
+shell:		folktags search <tag> # folktags currently not working
+
+Downloading and packaging:
+shell:		radar <url>
+shell:		radar <name>
+
+
+
+FRDCSA Natural Language Processing Capabilities:
+
+There are a few projects that are going to systematically change the
+NLP capabilities of the FRDCSA.  Right now, they are adhoc and not
+centrally located.  The sayer system will provide the ability to
+consolidate all NLP functions.  In the mean time, here they are:
+
+Fact Extraction
+Logic Form Extraction
+
+
+
+
+
+Question Answering:
+
+shell:		quac --mods OpenEphyra Aranea -q "What color is Boardwalk in Monopoly?"
+unilang:	QUAC, What color is Boardwalk in Monopoly?
+
+Note that with some adjustment, QUAC can be made to search within a
+particular text collection for answers.
+
+
+
+Managing Communications with Audience:
+
+
+
+
+LICENSE:
+
+Where not specified, all software is released under the GPL, all
+documentation under the GNU Documentation License, and all media files
+under Creative Commons.
+
+Owing to the nature of this haphazard release, please report any
+copyrighted files or otherwise legal concerns to us for immediate
+repair.
+
+
+
+
+
+
+
+
+
+
+
+	   
+	  },
+
+# (isa Sentence Text)

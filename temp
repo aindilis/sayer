@@ -1,0 +1,37 @@
+my $dataandcodeidexist = (exists $self->Graph->{$dataid} and exists $self->Graph->{$dataid}->{$codeid});
+my $hasresult = exists $args{HasResult};
+my $overwrite = (exists $args{Overwrite} and $args{Overwrite});
+my $result = exists $args{Result};
+
+# if there is a has result, we need to check whether the dataandcodeexist
+if ($hasresult) {
+  return $dataandcodeexist;
+}
+
+# if there is a result, we want to set the result
+if ($result) {
+  print "Using provided result and adding to cache\n";
+  $resultid = $self->AddData(Data => $args{Result});
+  if (! defined $resultid) {
+    die "id not defined: ".Dumper(\@res)."\n\n";
+  }
+  Assign($self->Graph,$dataid,$codeid,$resultid);
+  Assign($self->IGraph,$resultid,$codeid,$dataid);
+  @res = @{$args{Result}};
+}
+
+# lastly, now we check if it is exists, and retrieve that, otherwise compute it, store it, and use that
+if ($dataandcodeidexist and ! $overwrite) {
+  print "Retrieving result from cache\n";
+  $resultid = $self->Graph->{$dataid}->{$codeid};
+  @res = $self->GetDataFromID(DataID => $resultid) if ! $args{NoRetrieve};
+} else {
+  print "Computing result and adding to cache\n";
+  @res = $cref->(@dlist);
+  $resultid = $self->AddData(Data => \@res);
+  if (! defined $resultid) {
+    die "id not defined: ".Dumper(\@res)."\n\n";
+  }
+  Assign($self->Graph,$dataid,$codeid,$resultid);
+  Assign($self->IGraph,$resultid,$codeid,$dataid);
+}
